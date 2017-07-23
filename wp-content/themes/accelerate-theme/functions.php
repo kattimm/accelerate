@@ -36,7 +36,6 @@ function accelerate_setup() {
 	 */
 	add_theme_support( 'title-tag' );
 
-
     // Register Menus
     register_nav_menus( array (
         'top-nav' => __( 'Top Nav', 'accelerate' ),
@@ -45,14 +44,12 @@ function accelerate_setup() {
 }
 add_action( 'after_setup_theme', 'accelerate_setup' );
 
-
 // Enqueue scripts and styles.
 function accelerate_scripts() {
 	wp_enqueue_style( 'accelerate-style', get_stylesheet_uri() );
     wp_enqueue_style( 'accelerate-google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400i,600,600i,700,700i' );
 }
 add_action( 'wp_enqueue_scripts', 'accelerate_scripts' );
-
 
 // Register widget area
 function accelerate_widgets_init() {
@@ -68,7 +65,6 @@ function accelerate_widgets_init() {
 }
 add_action( 'widgets_init', 'accelerate_widgets_init' );
 
-
 // Defines custom markup for post comments
 function accelerate_comments($comment, $args, $depth) {
 	$comment  = '<li class="comment">';
@@ -80,6 +76,7 @@ function accelerate_comments($comment, $args, $depth) {
 	$comment .= '<p>' . get_comment_text() . '</p>';
 	$comment .= '</div>';
 	$comment .= '</li>';
+	
 	echo $comment;
 }
 
