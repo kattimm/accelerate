@@ -81,7 +81,7 @@ function accelerate_comments($comment, $args, $depth) {
 	$comment .= '</div>';
 	$comment .= '</li>';
 	echo $comment;
-
+}
 
 // Changes excerpt symbol
 function custom_excerpt_more($more) {
