@@ -13,14 +13,14 @@
 @import url("../accelerate-theme/style.css");
 
 
-/********************************************* GLOBAL STYLES ***/
+/*********************************** GLOBAL STYLES ***/
 #masthead {
     background: repeat scroll 0 0 #45ac9d;
 }
 
 
 
-/********************************************* HOMEPAGE STYLES ***/
+/*********************************** HOMEPAGE STYLES ***/
 
 .home-page {
     background: url("img/taxi-photo.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
@@ -28,4 +28,26 @@
 
 .button {
     background: none repeat scroll 0 0 #45ac9d;
+}
+
+/*********************************** BLOG POST ***/
+
+.blog-post {
+	width: 50%;
+}
+
+.blog-post h4 {
+	color: #a6a6a6;
+	text-transform: uppercase;
+}
+
+.blog-post h2 {
+	font-size: 1.5em;
+}
+
+.read-more-link a {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	color: #45ac9d;
+	text-transform: uppercase;
 }
