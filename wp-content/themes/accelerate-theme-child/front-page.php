@@ -25,6 +25,7 @@ get_header(); ?>
 	</div><!-- .container -->
 </section><!-- .home-page -->
 
+
 <section class="featured-work">
 	<div class="site-content">
 		<h4>Featured Work</h4>
@@ -33,9 +34,9 @@ get_header(); ?>
 			<?php query_posts("posts_per_page=3&post_type=case_studies"); ?>
 			<?php while (have_posts() ) : the_post(); 
 				$image_1 = get_field("image_1");
-				$size = "medium";
-			?>
+				$size = "medium"; ?>
 
+				<!-- loop content here -->
 				<li class="individual-featured-work">
 					<figure>
 						<?php echo wp_get_attachment_image($image_1, $size); ?>
@@ -44,7 +45,6 @@ get_header(); ?>
 					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				</li>
 
-				<!-- loop content here -->
 				<?php endwhile; ?><!-- end loop -->
 			<?php wp_reset_query(); ?>
 		</ul>
@@ -64,7 +64,16 @@ get_header(); ?>
 				<?php endwhile; ?>
 			<?php wp_reset_query(); ?>
 		</div><!-- .blog-post -->
+
+		<!-- twitter sidebar -->
+		<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+			<div id="secondary" class="widget-area twitter-widget" role="complementary">
+			<?php dynamic_sidebar( 'sidebar-2' ); ?>
+			</div>
+		<?php endif; ?>
 	</div><!-- .site-content -->
 </section><!-- .recent-posts -->
+
+
 
 <?php get_footer(); ?>
